@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xasmall">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="力扣385题  题目描述： 给定一个字符串 s 表示一个整数嵌套列表，实现一个解析它的语法分析器并返回解析的结果 NestedInteger 。 列表中的每个元素只可能是整数或整数嵌套列表  举例 12345678输入：s &#x3D; &quot;[123,[456,[789]]]&quot;,输出：[123,[456,[789]]]解释：返回一个 NestedInteger 对象包含一个有两个元素的嵌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日一题385">
+<meta property="og:url" content="http://119.29.194.249/2022/04/16/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98385/index.html">
+<meta property="og:site_name" content="XASMALL WORKSPACE">
+<meta property="og:description" content="力扣385题  题目描述： 给定一个字符串 s 表示一个整数嵌套列表，实现一个解析它的语法分析器并返回解析的结果 NestedInteger 。 列表中的每个元素只可能是整数或整数嵌套列表  举例 12345678输入：s &#x3D; &quot;[123,[456,[789]]]&quot;,输出：[123,[456,[789]]]解释：返回一个 NestedInteger 对象包含一个有两个元素的嵌">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-16T03:47:49.000Z">
+<meta property="article:modified_time" content="2022-11-14T02:32:59.801Z">
+<meta property="article:author" content="xasmall">
+<meta property="article:tag" content="栈">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>每日一题385 - XASMALL WORKSPACE</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"119.29.194.249","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="XASMALL WORKSPACE" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>xasmall的博客空间</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="每日一题385">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-16 11:47" pubdate>
+        2022年4月16日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      22 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">每日一题385</h1>
+            
+            <div class="markdown-body">
+              <h3 id="力扣385题"><a class="markdownIt-Anchor" href="#力扣385题"></a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/mini-parser/">力扣385题</a></h3>
+<h4 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述：</h4>
+<p>给定一个字符串 s 表示一个整数嵌套列表，实现一个解析它的语法分析器并返回解析的结果 NestedInteger 。<br>
+列表中的每个元素只可能是整数或整数嵌套列表</p>
+<h4 id="举例"><a class="markdownIt-Anchor" href="#举例"></a> 举例</h4>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs livecodeserver">输入：s = <span class="hljs-string">&quot;[123,[456,[789]]]&quot;</span>,<br>输出：[<span class="hljs-number">123</span>,[<span class="hljs-number">456</span>,[<span class="hljs-number">789</span>]]]<br>解释：返回一个 NestedInteger 对象包含一个有两个元素的嵌套列表：<br><span class="hljs-number">1.</span> 一个 <span class="hljs-keyword">integer</span> 包含值 <span class="hljs-number">123</span><br><span class="hljs-number">2.</span> 一个包含两个元素的嵌套列表：<br>    i.  一个 <span class="hljs-keyword">integer</span> 包含值 <span class="hljs-number">456</span><br>    ii. 一个包含一个元素的嵌套列表<br>         <span class="hljs-keyword">a</span>. 一个 <span class="hljs-keyword">integer</span> 包含值 <span class="hljs-number">789</span><br></code></pre></td></tr></table></figure>
+<h4 id="java代码"><a class="markdownIt-Anchor" href="#java代码"></a> java代码</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * // This is the interface that allows for creating nested lists.</span><br><span class="hljs-comment"> * // You should not implement it, or speculate about its implementation</span><br><span class="hljs-comment"> * public interface NestedInteger &#123;</span><br><span class="hljs-comment"> *     // Constructor initializes an empty nested list.</span><br><span class="hljs-comment"> *     public NestedInteger();</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> *     // Constructor initializes a single integer.</span><br><span class="hljs-comment"> *     public NestedInteger(int value);</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> *     // <span class="hljs-doctag">@return</span> true if this NestedInteger holds a single integer, rather than a nested list.</span><br><span class="hljs-comment"> *     public boolean isInteger();</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> *     // <span class="hljs-doctag">@return</span> the single integer that this NestedInteger holds, if it holds a single integer</span><br><span class="hljs-comment"> *     // Return null if this NestedInteger holds a nested list</span><br><span class="hljs-comment"> *     public Integer getInteger();</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> *     // Set this NestedInteger to hold a single integer.</span><br><span class="hljs-comment"> *     public void setInteger(int value);</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> *     // Set this NestedInteger to hold a nested list and adds a nested integer to it.</span><br><span class="hljs-comment"> *     public void add(NestedInteger ni);</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> *     // <span class="hljs-doctag">@return</span> the nested list that this NestedInteger holds, if it holds a nested list</span><br><span class="hljs-comment"> *     // Return empty list if this NestedInteger holds a single integer</span><br><span class="hljs-comment"> *     public List&lt;NestedInteger&gt; getList();</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><br><span class="hljs-comment">// 用来标识[</span><br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">NestedInteger</span> <span class="hljs-variable">SIGN</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">NestedInteger</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">public</span> NestedInteger <span class="hljs-title function_">deserialize</span><span class="hljs-params">(String s)</span> &#123;<br>        Deque&lt;NestedInteger&gt; deque = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayDeque</span>&lt;&gt;();<br>        <span class="hljs-type">char</span>[] c = s.toCharArray();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> c.length,i=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(i&lt;n)&#123;<br>            <span class="hljs-keyword">if</span>(c[i]==<span class="hljs-string">&#x27;,&#x27;</span>&amp;&amp;++i&gt;<span class="hljs-number">0</span>) <span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(c[i]==<span class="hljs-string">&#x27;-&#x27;</span>||(c[i]&gt;=<span class="hljs-string">&#x27;0&#x27;</span>&amp;&amp;c[i]&lt;=<span class="hljs-string">&#x27;9&#x27;</span>))&#123;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> c[i]==<span class="hljs-string">&#x27;-&#x27;</span>?i+<span class="hljs-number">1</span>:i;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">while</span>(j&lt;n&amp;&amp;(c[j]&gt;=<span class="hljs-string">&#x27;0&#x27;</span>&amp;&amp;c[j]&lt;=<span class="hljs-string">&#x27;9&#x27;</span>))&#123;<br>                    sum = sum*<span class="hljs-number">10</span> + (c[j++]-<span class="hljs-string">&#x27;0&#x27;</span>);<br>                &#125;<br>                deque.addLast(<span class="hljs-keyword">new</span> <span class="hljs-title class_">NestedInteger</span>(c[i]==<span class="hljs-string">&#x27;-&#x27;</span>?-sum:sum));<br>                i=j;<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(c[i]==<span class="hljs-string">&#x27;[&#x27;</span>)&#123;<br>                <span class="hljs-comment">/*</span><br><span class="hljs-comment">                在下一个else中。我们需要从栈中找到与其匹配的SIGN，找到之后对栈的最顶端的</span><br><span class="hljs-comment">                NestedInteger进行添加，所以需要压栈一个NestedInteger</span><br><span class="hljs-comment">                */</span><br>                deque.addLast(<span class="hljs-keyword">new</span> <span class="hljs-title class_">NestedInteger</span>());<br>                deque.addLast(SIGN);<br>                i++;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br><br>                <span class="hljs-comment">/*</span><br><span class="hljs-comment">                解释一下为什么要倒叙放入到NestedInteger中，因为list中的数据是栈中退出来的</span><br><span class="hljs-comment">                所以它的顺序就是反过来的，为了添加的时候顺序正过来，需要倒叙添加</span><br><span class="hljs-comment">                */</span><br>                List&lt;NestedInteger&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>                <span class="hljs-keyword">while</span>(!deque.isEmpty())&#123;<br>                    <span class="hljs-type">NestedInteger</span> <span class="hljs-variable">poll</span> <span class="hljs-operator">=</span> deque.pollLast();<br>                    <span class="hljs-keyword">if</span>(poll==SIGN) <span class="hljs-keyword">break</span>;<br>                    list.add(poll);<br>                &#125;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> list.size()-<span class="hljs-number">1</span>;j&gt;=<span class="hljs-number">0</span>;j--)&#123;<br>                    deque.peekLast().add(list.get(j));<br>                &#125;<br>                i++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> deque.peekLast();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="解释"><a class="markdownIt-Anchor" href="#解释"></a> 解释</h4>
+<p>栈的使用题，需要注意的是当需要出栈的时候，我们使用了一个List存在了里面，但是栈是后进先出的，<br>
+所以存放在list中的数据是倒叙的，故从list中取出来存到NestedInteger中的时候，需要反着来</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A0%88/">栈</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/16/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98479/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">每日一题479</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/13/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8Blinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84ip%E5%9C%B0%E5%9D%80%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
+                        <span class="hidden-mobile">记录一下linux服务器的ip地址配置方法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

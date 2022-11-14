@@ -1,0 +1,791 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xasmall">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="XASMALL WORKSPACE">
+<meta property="og:url" content="http://119.29.194.249/index.html">
+<meta property="og:site_name" content="XASMALL WORKSPACE">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="xasmall">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>XASMALL WORKSPACE</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"119.29.194.249","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="XASMALL WORKSPACE" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>xasmall的博客空间</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="今天你吃了几碗饭呀">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/11/14/clash%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%84%E5%88%99/" target="_self">
+          clash配置代理规则
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/11/14/clash%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%84%E5%88%99/" target="_self">
+          
+          clash代理配置问题 由于经常使用github，但是由于某些原因，不使用一些工具就经常断断续续，使用了工具又会出现git push不上去 所以设置git走代理 12git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:7890git config --global https.proxy http:&#x2F;&#x2F;127.0.0.1:7890 7890就是代理端口
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-11-14 10:59" pubdate>
+              2022-11-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BB%A3%E7%90%86/">代理</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/clash/">clash</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/11/redis-%E9%93%BE%E8%A1%A8/" target="_self">
+          redis-链表
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/06/11/redis-%E9%93%BE%E8%A1%A8/" target="_self">
+          
+          redis-链表 由于redis使用的C语言并没有内置这种数据结构，所以redis构建了自己的链表实现 链表在redis中的应用十分广泛，列表键的底层实现之一就是链表，当一个列表键包含了数量很多的元素又或者列表中的元素都是比较长的字符串时，redis就会使用链表作为列表键的底层实现 链表节点实现：本质上是一个双端链表 12345typedef struct listNode&amp;#123;	stru
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-11 10:23" pubdate>
+              2022-06-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Redis/">Redis</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/redis/">redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/11/redis-%E7%AE%80%E5%8D%95%E5%8A%A8%E6%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+          redis-简单动态字符串
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/06/11/redis-%E7%AE%80%E5%8D%95%E5%8A%A8%E6%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+          
+          redis-简单动态字符串 SDS: 123456789struct sdshdr&amp;#123;	int len; &#x2F;&#x2F; SDS所保存字符串的长度		int free; &#x2F;&#x2F;记录buf数组中未使用字节的数量		char buf[]; &#x2F;&#x2F;字节数组，用于保存字符串		&#x2F;&#x2F; SDS遵循C字符串以空字符结尾的惯例，保存空字符的1字节(&amp;#x27;\0&amp;#x27;)不计算再SDS的len属性里面，并且为空
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-11 10:06" pubdate>
+              2022-06-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Redis/">Redis</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/redis/">redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/09/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E8%B5%8B%E5%80%BC/" target="_self">
+          go语言学习-赋值
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/06/09/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E8%B5%8B%E5%80%BC/" target="_self">
+          
+          1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768package mainimport &quot;fmt&quot;&#x2F;&#x2F; go语言的赋值操作type Books struct &amp;#123;	ti
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-09 00:50" pubdate>
+              2022-06-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/go/">go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/go/">go</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/08/java%E6%96%B9%E6%B3%95CompareTo%E5%BC%95%E5%8F%91%E7%9A%84%E9%94%99%E8%AF%AF/" target="_self">
+          java方法CompareTo引发的错误
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/06/08/java%E6%96%B9%E6%B3%95CompareTo%E5%BC%95%E5%8F%91%E7%9A%84%E9%94%99%E8%AF%AF/" target="_self">
+          
+          java CompareTo方法 记录一下今天刷力扣的时候使用Arrays.sort时出现的错误 1Comparison method violates its general contract! 这个问题的意思就是说比较顺序需要满足可逆比较 我们看一下java实现的CompareTo方法 123456789101112131415161718public int compareTo(Strin
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-08 18:44" pubdate>
+              2022-06-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/java/">java</a>
+            
+              <a href="/tags/bug%E4%BF%AE%E5%A4%8D/">bug修复</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/06/%E7%BA%BF%E6%AE%B5%E6%A0%9101/" target="_self">
+          线段树01
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/06/06/%E7%BA%BF%E6%AE%B5%E6%A0%9101/" target="_self">
+          
+          123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293public class SegmentTre
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-06 22:56" pubdate>
+              2022-06-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/29/kmp/" target="_self">
+          acwing基础算法之kmp
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/29/kmp/" target="_self">
+          
+          题目描述 给定一个模式串 S，以及一个模板串 P，所有字符串中只包含大小写英文字母以及阿拉伯数字。 模板串 P 在模式串 S 中多次作为子串出现。 求出模板串 P 在模式串 S 中所有出现的位置的起始下标。 输入格式 第一行输入整数 N，表示字符串 P 的长度。 第二行输入字符串 P。 第三行输入整数 M，表示字符串 S 的长度。 第四行输入字符串 S。 输出格式 共一行，输出所有出现位置的起始
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-29 15:38" pubdate>
+              2022-05-29
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/kmp/">kmp</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/27/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8Bhash/" target="_self">
+          大数据之hash
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/27/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8Bhash/" target="_self">
+          
+          jaccard相似度：用来描述两个集合间的相似度 jaccard(A，B) &#x3D; (A^B)&#x2F;(AUB)，即A与B交集的元素个数除以A与B并集的元素个数 K-single: 假如我们把一篇文章看成一个长的字符串，那么k-single就是这篇文章中长度为k的任意字符子串，一篇文章就是很多个不同的k-single的集合 例如 文章内容为&quot;abcdabd&quot;，k &#x3D; 2 ,那么这篇文章中
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-27 22:36" pubdate>
+              2022-05-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9D%82%E9%A1%B9%E5%86%85%E5%AE%B9%E5%AD%A6%E4%B9%A0/">杂项内容学习</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a>
+            
+              <a href="/tags/Hash/">Hash</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/24/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/" target="_self">
+          acwing基础算法-单调栈/单调队列
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/24/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/" target="_self">
+          
+          单调栈 用途：用于解决找到某一个数的左右端离他最近的比它小或者大的数 例子：给定一个长度为 N 的整数数列，输出每个数左边第一个比它小的数，如果不存在则输出 −1。 1234567891011121314151617import java.util.*;class Main&amp;#123;    public static void main(String[] args)&amp;#123;
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-24 17:05" pubdate>
+              2022-05-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>
+            
+              <a href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/">单调队列</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/13/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4/" target="_self">
+          acwing基础算法高精度加减乘除
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/13/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4/" target="_self">
+          
+          高精度加减乘除  高精度加法，两大大整数相加 1234567891011121314151617181920212223242526import java.util.Scanner;import java.lang.String;import java.lang.StringBuilder;public class Main&amp;#123;    public static String add(S
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-13 18:54" pubdate>
+              2022-05-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/">高精度</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
